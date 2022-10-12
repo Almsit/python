@@ -10,7 +10,6 @@ def arr_sort(arr):
     if(len(arr) > 0):
         arr_sort(arr);
     else:
-        print(arr_temp)
         return arr_temp;
     
 arr = [];
@@ -20,5 +19,5 @@ for i in range(0, 10):
     arr.append(i);
 
     
-arr_temp = arr_sort(arr);
+arr_sort(arr);
 print(arr_temp);
