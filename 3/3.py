@@ -13,7 +13,7 @@ inp = input('Введите размер списка ');
 inp = valid_inp(inp);
 
 if(inp == False):
-    print("Ошибка. Неправильое число");
+    print("Ошибка. Неправильное число");
     sys.exit();
 
 
@@ -22,7 +22,7 @@ list1 = [round(uniform(0,9),2) for i in range(inp)]
 min = min(list1, key=lambda i: float(i))
 max = max(list1, key=lambda i: float(i))
 
-dif = (max - int(max)) - (min - int(min))
+dif = float(max) - float(min); #(max - int(max)) - (min - int(min))
 
 print(list1)
 print(max, min)
