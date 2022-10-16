@@ -41,25 +41,6 @@ for i in list1:
     if(max <= i_temp):
         max = i_temp;
 
-'''
-    if(len(i[1])>1):
-        i_temp = round(int(i[1])/10, 2);
-    else:
-        i_temp = int(i[1]);
-    
-
-    if(min == "None"):
-        min = i_temp;
-    if(max == "None"):
-        max = i_temp;
-
-    if(min >= i_temp):
-        min = i_temp;
-
-    if(max <= i_temp):
-        max = i_temp;
-
-'''
 print(list1)
 print(max, min)
 print(max - min)
