@@ -19,11 +19,20 @@ if(inp == False):
 
 list1 = [round(uniform(0,9),2) for i in range(inp)]
 
-min = min(list1, key=lambda i: float(i))
-max = max(list1, key=lambda i: float(i))
-
-dif = float(max) - float(min); #(max - int(max)) - (min - int(min))
+min = "None";
+max = "None";
+for i in list1:
+    i = str(i).split(".");
+    
+    if(min == "None"):
+        min = int(i[1]);
+    if(max == "None"):
+        max = int(i[1]);
+    if(min >= int(i[1])):
+        min = int(i[1]);
+    if(max <= int(i[1])):
+        max = int(i[1]);
 
 print(list1)
 print(max, min)
-print(round(dif,2))
+print(max - min)
