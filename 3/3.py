@@ -31,7 +31,7 @@ for i in list1:
 
     if(min == "None"):
         min = i_temp;
-
+ 
     if(max == "None"):
         max = i_temp;
 
