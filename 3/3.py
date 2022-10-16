@@ -21,18 +21,45 @@ list1 = [round(uniform(0,9),2) for i in range(inp)]
 
 min = "None";
 max = "None";
+i_temp = 0;
 for i in list1:
     i = str(i).split(".");
-    
-    if(min == "None"):
-        min = int(i[1]);
-    if(max == "None"):
-        max = int(i[1]);
-    if(min >= int(i[1])):
-        min = int(i[1]);
-    if(max <= int(i[1])):
-        max = int(i[1]);
+    if(len(i[1]) == 1):
+        i_temp = int(i[1])*10;
+    else:
+        i_temp = int(i[1]);
 
+    if(min == "None"):
+        min = i_temp;
+
+    if(max == "None"):
+        max = i_temp;
+
+    if(min >= i_temp):
+        min = i_temp;
+
+    if(max <= i_temp):
+        max = i_temp;
+
+'''
+    if(len(i[1])>1):
+        i_temp = round(int(i[1])/10, 2);
+    else:
+        i_temp = int(i[1]);
+    
+
+    if(min == "None"):
+        min = i_temp;
+    if(max == "None"):
+        max = i_temp;
+
+    if(min >= i_temp):
+        min = i_temp;
+
+    if(max <= i_temp):
+        max = i_temp;
+
+'''
 print(list1)
 print(max, min)
 print(max - min)
