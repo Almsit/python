@@ -24,7 +24,8 @@ def create_str(sp):
     else:
         for i in range(len(lst)):
             if i != len(lst) - 1 and lst[i] != 0 and i != len(lst) - 2:
-                wr += f'{lst[i]}x^{len(lst)-i-1}'
+                #wr += f'{lst[i]}x^{len(lst)-i-1}'
+                wr += f'x^{len(lst)-i-1}'
                 if lst[i+1] != 0:
                     wr += ' + '
             elif i == len(lst) - 2 and lst[i] != 0:

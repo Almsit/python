@@ -5,18 +5,22 @@ def valid_inp(inp):
        return int(inp);
     return False;
 
-inp = input('Введите размер списка ');
+inp = input('Введите число ');
 
 inp = valid_inp(inp);
 
-i = 2 # первое простое число
+
+
+i = 1 # первое простое число
 lst = []
 old = inp
+
+
+
 while i <= inp:
     if inp % i == 0:
         lst.append(i)
-        inp //= i
-        i = 2
+        i += 1
     else:
         i += 1
 print(f"Простые множители числа {old} приведены в списке: {lst}")
